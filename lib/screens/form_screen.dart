@@ -127,16 +127,17 @@ class _FormScreenState extends State<FormScreen> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           print(nameController.text);
-                          print(difficultyController.text);
-                          print(int.parse(imageController.text));
+                          print(int.parse(difficultyController.text));
+                          print(imageController.text);
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text("Adicionando nova tarefa!"),
                             ),
                           );
+                          Navigator.pop(context);
                         }
                       },
-                      style: ElevatedButton.styleFrom(
+                    style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(

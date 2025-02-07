@@ -129,6 +129,11 @@ class _FormScreenState extends State<FormScreen> {
                           print(nameController.text);
                           print(difficultyController.text);
                           print(int.parse(imageController.text));
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Adicionando nova tarefa!"),
+                            ),
+                          );
                         }
                       },
                       style: ElevatedButton.styleFrom(

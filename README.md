@@ -1,15 +1,4 @@
-# Atividade referente a Sprint4 - "Aplicando boas práticas".
+# Sprint5
+Todas as atividades referentes a Sprint 5 estão divididas em branches. Cada branch referencia um módulo da sprint 5 e dentro dessa branch está a atividade do módulo.
 
-Segue a atividade abaixo do projeto de Todo List que foi feita durante as aulas. Agora, **refatorado e com efeito de 'concluído'**.
-
-- Primeira Versão:
-
-![img_2.png](img_2.png)
-
-- Segunda versão:
-
-![img_1.png](img_1.png)
-
-- Terceira versão:
-
-![img_6.png](img_6.png)
+Por exemplo, a branch "construindo_formularios" refere-se ao módulo "Construindo Formularios" e nela está contida a atividade proposta para este módulo. 

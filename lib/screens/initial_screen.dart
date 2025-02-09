@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_studies/data/task_inherited.dart';
 import 'package:flutter_studies/screens/form_screen.dart';
-
-import '../components/task.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -23,23 +22,17 @@ class _InitialScreenState extends State<InitialScreen> {
         backgroundColor: Colors.blue,
       ),
       body: ListView(
-        children: [
-          Task("Aprender flutter", "assets/images/dash.png", 4),
-          Task("Andar de bike", "assets/images/bike.webp", 2),
-          Task("Ler", "assets/images/ler.jpg", 1),
-          Task("Meditar", "assets/images/meditar.jpeg", 5),
-          Task("Jogar", "assets/images/play.jpg", 1),
-          SizedBox(
-            height: 80,
-          ),
-        ],
+        children: TaskInherited.of(context).taskList,
+        padding: EdgeInsets.only(top: 8, bottom: 70),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => FormScreen(),
+              builder: (contextNew) => FormScreen(
+                taskContext: context,
+              ),
             ),
           );
         },
